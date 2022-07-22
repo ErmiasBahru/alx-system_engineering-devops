@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script displays from /etc/shadow the username, id, and home path for /etc/passwd
+while read LINE; do
+    echo "$LINE" | cut -d ":" -f 1,3,6
+done </etc/passwd
