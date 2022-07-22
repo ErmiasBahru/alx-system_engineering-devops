@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script will print Best School 10x using until loop
+
+i=0
+
+until ((i == 10))
+do
+	echo "Best School"
+	let i+=1
+done
