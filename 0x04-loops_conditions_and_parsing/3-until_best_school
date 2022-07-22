@@ -5,5 +5,5 @@ i=0
 
 until ((i == 10)); do
 	echo "Best School"
-	let i+=1
+	let $((i++))
 done
