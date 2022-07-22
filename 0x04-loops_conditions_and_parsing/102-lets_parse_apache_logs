@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script displays the IP address and HTTP codes from an Apache log access file
+awk '{print $1 " " $9}' <apache-access.log
