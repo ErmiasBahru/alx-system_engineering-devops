@@ -8,5 +8,5 @@ while [ $i -le 10 ]; do
 	if [ $i -eq 9 ]; then
 		echo "Hi"
 	fi
-	let i++
+	((i++))
 done
