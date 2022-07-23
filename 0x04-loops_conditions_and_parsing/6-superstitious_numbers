@@ -18,5 +18,5 @@ while [ $i -le 20 ]; do
 		echo "$i"
 		;;
 	esac
-	let i+=1
+	((i+=1))
 done
