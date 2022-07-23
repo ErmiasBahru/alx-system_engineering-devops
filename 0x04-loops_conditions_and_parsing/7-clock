@@ -9,7 +9,7 @@ while [ $i -le 12 ]; do
 	j=1
 	while [ $j -lt 60 ]; do
 		echo "$j"
-		let j++
+		((j++))
 	done
-	let i++
+	((i++))
 done
