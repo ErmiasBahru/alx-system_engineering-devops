@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script displays a lift of currently running processess
+
+ps -f -aux
