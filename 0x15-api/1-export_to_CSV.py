@@ -2,9 +2,9 @@
 """
 Python script to export data in the CSV format.
 """
-import requests as r
-import csv
 from sys import argv
+import csv
+import requests as r
 
 if __name__ == "__main__":
     employee_id = argv[1]
