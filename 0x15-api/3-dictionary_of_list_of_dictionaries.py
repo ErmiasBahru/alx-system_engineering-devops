@@ -7,8 +7,11 @@ import requests as r
 
 
 if __name__ == "__main__":
-    resp_user = r.get('https://jsonplaceholder.typicode.com/users')
-    resp_todos = r.get('https://jsonplaceholder.typicode.com/todos')
+    url_user = 'https://jsonplaceholder.typicode.com/users/'
+    url_todos = 'https://jsonplaceholder.typicode.com/todos'
+
+    resp_user = r.get(url_user)
+    resp_todos = r.get(url_todos)
 
     try:
         users = resp_user.json()
@@ -22,9 +25,9 @@ if __name__ == "__main__":
             usr_todos = list(filter(lambda todo: (
                 todo.get('userId') == user_id), user_todos))
             tasks = list(map(lambda todo: {
-                "title": todo.get('title'),
-                "completed": todo.get('completed'),
-                "username": user.get('username')
+                "username": user.get('username'),
+                "task": todo.get('title'),
+                "completed": todo.get('completed')
             }, usr_todos))
 
             data[user_id] = tasks
