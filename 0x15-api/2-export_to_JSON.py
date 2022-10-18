@@ -2,8 +2,8 @@
 """
 Python script to export data in the JSON format.
 """
-import requests as r
 import json
+import requests as r
 from sys import argv
 
 if __name__ == "__main__":
