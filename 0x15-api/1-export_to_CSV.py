@@ -2,16 +2,15 @@
 """
 Python script to export data in the CSV format.
 """
+
 from sys import argv
 import csv
 import requests as r
 
 if __name__ == "__main__":
     employee_id = argv[1]
-    url_user = 'https://jsonplaceholder.typicode.com/users/{}'.format(
-        employee_id)
-    url_todos = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(
-        employee_id)
+    url_user = f'https://jsonplaceholder.typicode.com/users/{employee_id}'
+    url_todos = f'https://jsonplaceholder.typicode.com/users/{employee_id}/todos'
 
     resp_user = r.get(url_user)
     resp_todos = r.get(url_todos)
@@ -19,7 +18,7 @@ if __name__ == "__main__":
     try:
         users = resp_user.json()
         user_todos = resp_todos.json()
-        csv_name = "{}.csv".format(users.get('id'))
+        csv_name = f"{users.get('id')}.csv"
 
         with open(csv_name, mode='w', encoding='utf-8',
                   newline='') as csv_data:
